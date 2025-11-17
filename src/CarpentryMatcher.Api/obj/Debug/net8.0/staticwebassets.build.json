@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "YBxWqTUASQQYwiEEa7IKcSHvqvyzGpuEYimhlUafb7o=",
+  "Source": "CarpentryMatcher.Api",
+  "BasePath": "_content/CarpentryMatcher.Api",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

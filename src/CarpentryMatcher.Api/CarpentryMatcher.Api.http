@@ -1,0 +1,19 @@
+@CarpentryMatcher.Api_HostAddress = http://localhost:5000
+
+### Get all carpenters
+GET {{CarpentryMatcher.Api_HostAddress}}/api/carpenters
+Accept: application/json
+
+### Get carpenters by city
+GET {{CarpentryMatcher.Api_HostAddress}}/api/carpenters?city=København
+Accept: application/json
+
+### Get carpenters by query
+GET {{CarpentryMatcher.Api_HostAddress}}/api/carpenters?query=terrace
+Accept: application/json
+
+### Get carpenter by ID
+GET {{CarpentryMatcher.Api_HostAddress}}/api/carpenters/1
+Accept: application/json
+
+###
