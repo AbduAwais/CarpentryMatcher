@@ -51,15 +51,4 @@ public class CarpentersController : ControllerBase
         return CreatedAtAction(nameof(GetById), new { id = carpenter.Id }, carpenter);
     }
     
-    
-    [HttpPost(Name = "Cities")]
-    public Actionresult<Cities> Cities(Cities cities)
-    {
-        MockCarpenter.Cities.Add(cities);
-        return CreatedAtAction(nameof(GetById), new { id = cities.Id }, cities);
-    } // denne skal bruges til at tilføje byer til listen man kan filtre mellem. 
-    
-    [HttpPost(Name = "Specialties")]
-    public Actionresult<Specialties> Specialties(Specialties specialties)
-    
 }
