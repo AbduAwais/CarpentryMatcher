@@ -1,3 +1,8 @@
+# Project Description
+AI-powered platform that helps people in Denmark quickly find the right carpenter for their project. Users describe the work they need (like “I want to build a terrace”), and the platform shows nearby carpenters who specialize in that exact type of job — with their phone number, city, and skills clearly visible so users can contact them directly.
+
+
+
 # Carpentry Matcher
 
 A full-stack application with a .NET 8 API backend and React + Vite frontend.
@@ -97,3 +102,4 @@ npm run build
 ```
 
 The production build will be in the `dist/` directory.
+
