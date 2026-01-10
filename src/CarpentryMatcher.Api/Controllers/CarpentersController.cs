@@ -30,16 +30,20 @@ public class CarpentersController : ControllerBase
             carpenters = carpenters.Where(c => c.City.ToLower().Contains(cityLower));
         }
 
+        // Load all carpenters first, then filter by query in memory
+        // because Specialties is stored as a string and EF Core can't translate the query
+        var results = await carpenters.ToListAsync();
+
         if (!string.IsNullOrWhiteSpace(query))
         {
             var q = query.Trim().ToLower();
-            carpenters = carpenters.Where(c =>
+            results = results.Where(c =>
                 c.Name.ToLower().Contains(q) ||
                 c.Specialties.Any(s => s.ToLower().Contains(q))
-            );
+            ).ToList();
         }
 
-        return Ok(await carpenters.ToListAsync());
+        return Ok(results);
     }
 
     // GET: /api/carpenters/1
