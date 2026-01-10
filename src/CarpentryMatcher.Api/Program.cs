@@ -1,8 +1,15 @@
+using Microsoft.EntityFrameworkCore;
+using CarpentryMatcher.Api.Data;
+
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+
+// Add SQLite database
+builder.Services.AddDbContext<CarpentryDbContext>(options =>
+    options.UseSqlite(builder.Configuration.GetConnectionString("DefaultConnection")));
 
 builder.Services.AddCors(options =>
 {
