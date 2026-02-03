@@ -1,3 +1,0 @@
-﻿<Project>
-  <Import Project="../build/CarpentryMatcher.Api.props" />
-</Project>
