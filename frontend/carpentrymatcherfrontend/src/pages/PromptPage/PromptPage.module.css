@@ -1,0 +1,17 @@
+.container {
+    max-width: 850px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+    min-height: calc(100vh - 5rem);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding-top: 25vh;
+}
+
+.subtitle {
+    font-size: 1.25rem;
+    color: var(--text-secondary);
+    margin: 0 0 1.5rem 0;
+    text-align: center;
+}

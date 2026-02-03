@@ -1,15 +1,15 @@
 using Microsoft.EntityFrameworkCore;
 using CarpentryMatcher.Api.Data;
+using Shared;
 
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllers();
-builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
+builder.Services.AddOpenApi();
 
-// Add SQLite database
+// Add PostgreSQL database
 builder.Services.AddDbContext<CarpentryDbContext>(options =>
-    options.UseSqlite(builder.Configuration.GetConnectionString("DefaultConnection")));
+    options.UseNpgsql(Paths.POSTGRES_DATABASE));
 
 builder.Services.AddCors(options =>
 {
@@ -24,8 +24,7 @@ builder.Services.AddCors(options =>
 
 var app = builder.Build();
 
-app.UseSwagger();
-app.UseSwaggerUI();
+app.MapOpenApi();
 
 if (!app.Environment.IsDevelopment())
 {
