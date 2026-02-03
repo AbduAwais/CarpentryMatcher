@@ -1,5 +1,5 @@
 import './App.css'
-import type { Carpenter } from "./types.ts/Carpenter";
+import type { Carpenter } from "./types/Carpenter";
 import { useEffect, useState } from "react";
 import "./App.css";
 
