@@ -1,10 +1,9 @@
-export type Carpenter = {
+export interface Carpenter {
     id: number;
     name: string;
     city: string;
     phone: string;
-    specialties: string[];
-    email?: string;
     website?: string;
+    specialties: string[];
     rating?: number;
-};
+}

@@ -30,6 +30,7 @@ function App() {
                 throw new Error(`API error: ${res.status}`);
             }
 
+            // estlint-disable-next-line @typescript-eslint/no-unsafe-assignment
             const data = (await res.json()) as Carpenter[];
             setCarpenters(data);
         } catch (err: any) {
@@ -66,7 +67,7 @@ function App() {
                             value={query}
                             onChange={(e) => setQuery(e.target.value)}
                             rows={3}
-                            style={{ width: "100%", marginTop: "0.25rem" }}
+                            style={{ width: "100%", marginTop: "0.25rem", borderRadius: "24" }}
                             placeholder="E.g. I want to build a wooden terrace ca. 20 m²"
                         />
                     </label>
