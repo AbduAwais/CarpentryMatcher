@@ -3,11 +3,11 @@ on:
     push:
         branches:
             - main
-            - DEV
+            - dev
     pull_request:
         branches:
             - main
-            - DEV
+            - dev
 jobs:
     build:
         runs-on: ubuntu-latest
