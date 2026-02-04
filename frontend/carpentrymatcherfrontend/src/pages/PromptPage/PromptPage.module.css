@@ -10,8 +10,11 @@
 }
 
 .subtitle {
-    font-size: 1.25rem;
-    color: var(--text-secondary);
-    margin: 0 0 1.5rem 0;
+    color: var(--ds-color-content-default, #141414);
     text-align: center;
+    word-wrap: break-word;
+    margin-bottom: 32px;
+    font-size: 2.5rem;
+    font-weight: 600;
 }
+

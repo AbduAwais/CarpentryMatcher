@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import { Header, PromptInput, ResultsSection } from '../../components';
 import { fetchCarpenters as fetchCarpentersApi } from '../../services';
 import styles from './PromptPage.module.css';
+export default PromptPage;
 
 function PromptPage() {
     const [carpenters, setCarpenters] = useState<Carpenter[]>([]);
@@ -37,7 +38,7 @@ function PromptPage() {
             <Header />
 
             <div className={styles.container}>
-                <p className={styles.subtitle}>Describe your job and find local carpenters</p>
+                <p className={styles.subtitle}>What carpentry work do you need done?</p>
 
                 <PromptInput
                     query={query}
@@ -55,4 +56,3 @@ function PromptPage() {
     );
 }
 
-export default PromptPage;
